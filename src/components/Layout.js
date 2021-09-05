@@ -7,18 +7,20 @@ import Footer from "./Footer";
 const useSyles = createUseStyles({
 
     page: {
-        minHeight: "100vh",
+        minHeight: "93vh",
         position: "relative",
         paddingBottom: "4em",
-        paddingLeft: "2em",
-        paddingRight: "2em",
+        marginLeft: "2em",
+        marginRight: "2em",
     },
     mainDesktop: {
-        maxWidth: "80 vw",
+        paddingBottom: "2em",
+        maxWidth: "1100px",
         margin: "0 auto",
     },
     mainMobile: {
-        maxWidth: "85 vw",
+        padding: "2em 0px",
+        maxWidth: "100vw",
         margin: "0 auto",
     }
 

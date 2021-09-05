@@ -19,19 +19,27 @@ const useStyles = createUseStyles({
     },
     menuOption: {
         color: "black",
+        "&:hover": {
+            color: "black",
+            opacity: "50%",
+            transition: "0.5s",
+        },
         fontSize: "1.5em",
-        marginRight: "2em",
+        marginLeft: "2em",
         textDecoration: "none",
         fontFamily: "'Poppins', sans-serif",
+        fontWeight: "600",
     },
     logoText: {
         color: "black",
         fontSize: "2.5rem",
         textDecoration: "none",
         fontFamily: "'Poppins', sans-serif",
-        color: "#2b2727",
+        fontWeight: "600",
+        color: "black",
         "&:hover": {
-            color: "#2b2727",
+            color: "#666B6A",
+            transition: "0.5s",
         },
     },
 })
@@ -49,9 +57,6 @@ export const Header = () => {
                 </Link>
                 <Link className={classes.menuOption} to="/projects">
                     PROJECTS
-                </Link>
-                <Link className={classes.menuOption} to="/experience">
-                    EXPERIENCE
                 </Link>
                 <span className={classes.menuOption}>
                     RESUME
