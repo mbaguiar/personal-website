@@ -15,7 +15,7 @@ const useSyles = createUseStyles({
     },
     mainDesktop: {
         paddingBottom: "2em",
-        maxWidth: "1100px",
+        maxWidth: "1200px",
         margin: "0 auto",
     },
     mainMobile: {

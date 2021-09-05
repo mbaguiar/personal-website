@@ -3,18 +3,19 @@ import Layout from "../components/Layout";
 import "../styles/global.scss";
 import photo from "../assets/photo.png";
 import { createUseStyles } from "react-jss";
+import { IoIosSquareOutline } from "@react-icons/all-files/io/IoIosSquareOutline";
 
 const useStyles = createUseStyles({
 	aboutMe: {
 		display: "flex",
 		flexDirection: "row",
-		marginTop: "10em",
+		marginTop: "12em",
 		alignItems: "center",
 	},
 	image: {
 		filter: "grayscale(100%)",
 		zIndex: "1",
-		marginTop: "-70px",
+		marginTop: "-90px",
 	},
 	title: {
 		fontFamily: "'Poppins', sans-serif",
@@ -34,18 +35,24 @@ const useStyles = createUseStyles({
 	description: {
 		fontFamily: "'Inconsolata', monospace",
         fontSize: "1.4em",
-		padding: "2em",
+		padding: "2em 2em 1em 2.5em",
         fontWeight: "400",
         fontStretch: "expanded",
 		border: "2px solid black",
 		marginTop: "-45px",
 		background: "white",
+		display: "flex",
+		flexDirection: "column",
 	},
 	text: {
 		alignSelf: "flex-end",
-		marginTop: "50px",
+		marginTop: "30px",
 		marginLeft: "-80px",
 		zIndex: "2",
+	},
+	paragraph: {
+		marginBottom: "25px",
+		listStyleType: "square",
 	}
 })
 
@@ -59,11 +66,12 @@ const IndexPage = () => {
 		<img className={classes.image} src={photo} alt="profile photo" width="400"/>
 		<div className={classes.text}>
 		  <span className={classes.title}><i className={classes.titleDecoration}>hello</i></span>
-		  <div className={classes.description}>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in mauris in augue pretium condimentum. 
-			Nam vestibulum in augue id commodo. Proin interdum dolor lorem, eget iaculis neque commodo a. Ut at libero dictum, sagittis odio ut, convallis justo. Fusce iaculis libero sed laoreet rhoncus. Fusce erat sem, luctus convallis dolor ac, commodo pretium arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ullamcorper elit ac lorem dignissim, non rhoncus sapien egestas. 
-			In sollicitudin leo commodo felis cursus laoreet.
-		  </div>
+		  <ul className={classes.description}>
+			<li className={classes.paragraph}> My name is Mariana Aguiar and I'm a <b>software enginner</b>, currently based in Porto, PT.</li>
+			<li className={classes.paragraph}> I've just graduated from FEUP with a <b>Masters in Informatics Engineering</b>.</li>
+			<li className={classes.paragraph}> I have a passion for creating and building things, and I am especially interested in <b>web and application development</b>. </li>
+			<li className={classes.paragraph}> In my free time, you can usually find me sitting in a coffee shop reading a fantasy novel or strolling around small art shops. </li>
+		  </ul>
 		</div>
 	  </article>
 	</Layout>
