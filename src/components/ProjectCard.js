@@ -35,7 +35,7 @@ const useStyles = createUseStyles({
         background: "linear-gradient(120deg, #95d5b2 0%, #95d5b2 100%)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 40%",
-        backgroundPosition: "0 60%",
+        backgroundPosition: "0 50%",
         padding: "0 10px 0 10px",
     },
     description: {

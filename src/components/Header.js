@@ -11,7 +11,6 @@ const useStyles = createUseStyles({
         alignItems: "center",
         padding: "2em",
     },
-    
     menu: {
         display: "flex",
         justifyContent: "space-around",
@@ -58,9 +57,9 @@ export const Header = () => {
                 <Link className={classes.menuOption} to="/projects">
                     PROJECTS
                 </Link>
-                <span className={classes.menuOption}>
+                <a href="https://drive.google.com/file/d/1jyLEfdlFNR0LKfvd_irDjrnQG_nRTL6k/view?usp=sharing" className={classes.menuOption}>
                     RESUME
-                </span>
+                </a>
             </div>
         </header>
     )
