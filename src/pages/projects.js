@@ -1,20 +1,21 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { useMediaQuery } from "react-responsive";
 import Projects from "../components/Projects";
 import ProjectsMobile from "../components/ProjectsMobile";
+import { Media } from 'gatsby-plugin-fresnel';
 
 const ProjectsPage = () => {
-    const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)"});
 
     return (
         <Layout>
             <title>Mariana Aguiar | Projects</title>
             <article>
-                {isTabletOrMobile ? 
-                    <ProjectsMobile/> :
-                    <Projects/>
-                }
+            <Media greaterThanOrEqual="lg">
+			    <Projects/>
+		    </Media>
+		    <Media lessThan="lg">
+			    <ProjectsMobile/> :
+		    </Media>
             </article>
         </Layout>
     )

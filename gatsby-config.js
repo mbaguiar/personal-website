@@ -39,6 +39,17 @@ module.exports = {
       options: {
         // Add any options here
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-fresnel`,
+      options: {
+        breakpoints: {
+          sm: 0,
+          md: 768,
+          lg: 1024,
+          xl: 1192,
+        },
+      },
+    },
   ],
 };

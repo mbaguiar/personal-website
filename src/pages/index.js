@@ -3,18 +3,19 @@ import Layout from "../components/Layout";
 import "../styles/global.scss";
 import AboutMeMobile from "../components/AboutMeMobile";
 import AboutMe from "../components/AboutMe";
-import { useMediaQuery } from "react-responsive";
+import { Media } from 'gatsby-plugin-fresnel';
 
 const IndexPage = () => {
-	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)"});
 
   return (
 	<Layout>
 		<title>Mariana Aguiar</title>
-		{isTabletOrMobile ? 
-			<AboutMeMobile/> :
+		<Media greaterThanOrEqual="lg">
 			<AboutMe/>
-		}
+		</Media>
+		<Media lessThan="lg">
+			<AboutMeMobile/> :
+		</Media>
 	</Layout>
   )
 }
