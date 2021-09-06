@@ -23,12 +23,14 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@react-icons/all-files": "^4.1.0",
+    "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.12.1",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-gatsby-cloud": "^3.0.0",
     "gatsby-plugin-manifest": "^3.13.0",
     "gatsby-plugin-mdx": "^2.12.0",
     "gatsby-plugin-sass": "^4.12.0",
+    "gatsby-plugin-styled-components": "^4.13.0",
     "gatsby-source-filesystem": "^3.12.0",
     "hamburger-react": "^2.4.1",
     "react": "^17.0.1",
@@ -38,6 +40,7 @@
     "react-responsive": "^9.0.0-beta.4",
     "sass": "^1.38.2",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3"
+    "semantic-ui-react": "^2.0.3",
+    "styled-components": "^5.3.1"
   }
 }
