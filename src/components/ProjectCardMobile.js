@@ -25,12 +25,6 @@ const useStyles = createUseStyles({
         color: "black",
         
     },
-    titleLink: {
-        "&:hover": {
-            color: "#666B6A",
-            transition: "0.5s",
-        },
-    },
     titleDecoration: {
         background: "linear-gradient(120deg, #95d5b2 0%, #95d5b2 100%)",
         backgroundRepeat: "no-repeat",

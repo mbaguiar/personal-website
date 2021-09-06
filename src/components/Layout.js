@@ -15,7 +15,7 @@ const useSyles = createUseStyles({
         marginRight: "2em",
     },
     pageMobile: {
-        minHeight: "93vh",
+        minHeight: "94vh",
         position: "relative",
         paddingBottom: "4em",
     },

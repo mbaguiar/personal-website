@@ -8,6 +8,7 @@ const useStyles = createUseStyles({
         fontSize: "1.4em",
 		fontWeight: "400",
 		marginTop: "50px",
+		marginLeft: "50px",
 	}
 })
 
