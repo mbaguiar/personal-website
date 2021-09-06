@@ -1,6 +1,9 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { Link } from "gatsby";
+import HamburgerMenu from "./HamburguerMenu";
+import { useState } from "react";
+import HamburguerIcon from "./HamburguerIcon";
 
 const useStyles = createUseStyles({
     navbar: {
@@ -10,18 +13,8 @@ const useStyles = createUseStyles({
         alignItems: "center",
         padding: "2em",
     },
-    menu: {
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center",
-    },
     menuOption: {
         color: "black",
-        "&:hover": {
-            color: "black",
-            opacity: "50%",
-            transition: "0.5s",
-        },
         fontSize: "1.5em",
         marginLeft: "2em",
         textDecoration: "none",
@@ -30,39 +23,27 @@ const useStyles = createUseStyles({
     },
     logoText: {
         color: "black",
-        fontSize: "2.5rem",
+        fontSize: "1.7rem",
         textDecoration: "none",
         fontFamily: "'Poppins', sans-serif",
         fontWeight: "600",
         color: "black",
-        "&:hover": {
-            color: "#666B6A",
-            transition: "0.5s",
-        },
-    },
+    }
 })
 
-export const Header = () => {
+export const HeaderMobile = () => {
     const classes = useStyles();
+    const [open, setOpen] = useState(false);
     return (
         <header className={classes.navbar}>
             <Link className={classes.logoText} to="/">
                 MARIANA AGUIAR
             </Link>
-            <div className={classes.menu}>
-                <Link className={classes.menuOption} to="/">
-                    ABOUT ME
-                </Link>
-                <Link className={classes.menuOption} to="/projects">
-                    PROJECTS
-                </Link>
-                <a href="https://drive.google.com/file/d/1jyLEfdlFNR0LKfvd_irDjrnQG_nRTL6k/view?usp=sharing" className={classes.menuOption}>
-                    RESUME
-                </a>
-            </div>
+            <HamburgerMenu setOpen={setOpen} open={open}/>
+            <HamburguerIcon setOpen={setOpen} open={open}/>
         </header>
     )
 
 }
 
-export default Header;
+export default HeaderMobile;

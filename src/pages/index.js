@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import "../styles/global.scss";
 import photo from "../assets/photo.png";
 import { createUseStyles } from "react-jss";
-import { IoIosSquareOutline } from "@react-icons/all-files/io/IoIosSquareOutline";
 
 const useStyles = createUseStyles({
 	aboutMe: {
@@ -63,7 +62,7 @@ const IndexPage = () => {
 	<Layout>
 	  <title>Mariana Aguiar</title>
 	  <article className={classes.aboutMe}>
-		<img className={classes.image} src={photo} alt="profile photo" width="400"/>
+		<img className={classes.image} src={photo} alt="profile" width="400"/>
 		<div className={classes.text}>
 		  <span className={classes.title}><i className={classes.titleDecoration}>hello</i></span>
 		  <ul className={classes.description}>

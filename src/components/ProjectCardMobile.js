@@ -8,9 +8,9 @@ import { CgArrowTopRight } from '@react-icons/all-files/cg/CgArrowTopRight'
 
 const useStyles = createUseStyles({
     card: {
-        padding: "2em",
+        padding: "1.5em",
         border: "2px solid black",
-        margin: "20px",
+        margin: "10px 20px 10px 20px",
     },
     cardContent: {
         display: "flex",
@@ -19,16 +19,7 @@ const useStyles = createUseStyles({
     title: {
         fontFamily: "'Poppins', sans-serif",
         fontWeight: "400",
-        fontSize: "2.4em",
-        marginBottom: "10px",
-        textDecoration: "none",
-        color: "black",
-        
-    },
-    titleMobile: {
-        fontFamily: "'Poppins', sans-serif",
-        fontWeight: "400",
-        fontSize: "1.5em",
+        fontSize: "1.4em",
         marginBottom: "10px",
         textDecoration: "none",
         color: "black",
@@ -49,7 +40,7 @@ const useStyles = createUseStyles({
     },
     description: {
         fontFamily: "'Inconsolata', monospace",
-        fontSize: "1.4em",
+        fontSize: "1.2em",
         marginBottom: "20px",
         fontWeight: "400",
         fontStretch: "expanded",
@@ -62,13 +53,13 @@ const useStyles = createUseStyles({
     techName: {
         fontFamily: "'Inconsolata', monospace",
         fontWeight: "400",
-        fontSize: "1.1em",
+        fontSize: "1em",
         color: "rgba(0, 0, 0, 0.6)",
         margin: "0 15px 10px 0",
     },
     info: {
         fontFamily: "'Inconsolata', monospace",
-        fontSize: "1.1em", 
+        fontSize: "1em", 
         fontWeight: "300",
     },
     icon: {
@@ -76,14 +67,14 @@ const useStyles = createUseStyles({
         verticalAlign: "0em",
     },
     link: {
-        verticalAlign: "-13px",
-        fontSize: "1.1em",
+        verticalAlign: "-4px",
+        fontSize: "1em",
         marginLeft: "5px",
     }
 
 });
 
-export const ProjectCard = ({ title, description, link, people, techs, type}) => {
+export const ProjectCardMobile = ({ title, description, link, people, techs, type}) => {
     library.add(faUser);
     const classes = useStyles();
 
@@ -110,7 +101,7 @@ export const ProjectCard = ({ title, description, link, people, techs, type}) =>
     );
 };
 
-ProjectCard.propTypes = {
+ProjectCardMobile.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     link: PropTypes.string,
@@ -119,4 +110,4 @@ ProjectCard.propTypes = {
     type: PropTypes.string,
 };
 
-export default ProjectCard;
+export default ProjectCardMobile;
