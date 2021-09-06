@@ -4,6 +4,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useMediaQuery } from "react-responsive";
 import HeaderMobile from "./HeaderMobile";
+import Helmet from 'react-helmet';
+import favicon from '../../public/static/favicon.ico';
 
 const useSyles = createUseStyles({
 
@@ -36,21 +38,26 @@ export const Layout = ({ children }) => {
     const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)"});
 
     return (
-        isTabletOrMobile ?
-            <div className={classes.pageMobile}>
-                <HeaderMobile/>
-                <main className={classes.mainMobile}>
-                    {children}
-                </main>
-                <Footer/>
-            </div> :
-            <div className={classes.page}>
-                <Header/>
-                <main className={classes.mainDesktop}>
-                    {children}
-                </main>
-                <Footer/>
-            </div> 
+        <>
+            <Helmet>
+                <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
+            </Helmet>
+            {isTabletOrMobile ?
+                <div className={classes.pageMobile}>
+                    <HeaderMobile/>
+                    <main className={classes.mainMobile}>
+                        {children}
+                    </main>
+                    <Footer/>
+                </div> :
+                <div className={classes.page}>
+                    <Header/>
+                    <main className={classes.mainDesktop}>
+                        {children}
+                    </main>
+                    <Footer/>
+                </div> }
+        </>
     )
 };
 
