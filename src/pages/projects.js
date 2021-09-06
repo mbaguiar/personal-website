@@ -2,20 +2,18 @@ import React from "react";
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
 import ProjectsMobile from "../components/ProjectsMobile";
-import { Media } from 'gatsby-plugin-fresnel';
+import { useWindowSize } from "../hooks/windowSize";
 
 const ProjectsPage = () => {
-
+    const device = useWindowSize();
     return (
         <Layout>
             <title>Mariana Aguiar | Projects</title>
             <article>
-            <Media greaterThanOrEqual="lg">
-			    <Projects/>
-		    </Media>
-		    <Media lessThan="lg">
-			    <ProjectsMobile/> :
-		    </Media>
+                {device === "mobile" ?
+			        <ProjectsMobile/> :
+			        <Projects/>
+                }
             </article>
         </Layout>
     )

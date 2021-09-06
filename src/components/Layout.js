@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Media } from 'gatsby-plugin-fresnel';
+import { useWindowSize } from "../hooks/windowSize";
 import HeaderMobile from "./HeaderMobile";
 import Helmet from 'react-helmet';
 import favicon from '../assets/icon.png';
@@ -35,13 +35,21 @@ const useSyles = createUseStyles({
 
 export const Layout = ({ children }) => {
     const classes = useSyles();
+    const device = useWindowSize();
 
     return (
         <>
             <Helmet>
                 <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
             </Helmet>
-            <Media greaterThanOrEqual="lg">
+            {device === "mobile" ? 
+                <div className={classes.pageMobile}>
+                    <HeaderMobile/>
+                    <main className={classes.mainMobile}>
+                        {children}
+                    </main>
+                    <Footer/>
+                </div> :
                 <div className={classes.page}>
                     <Header/>
                     <main className={classes.mainDesktop}>
@@ -49,16 +57,7 @@ export const Layout = ({ children }) => {
                     </main>
                     <Footer/>
                 </div>
-            </Media>
-            <Media lessThan="lg">
-                <div className={classes.pageMobile}>
-                    <HeaderMobile/>
-                    <main className={classes.mainMobile}>
-                        {children}
-                    </main>
-                    <Footer/>
-                </div>
-            </Media>
+            }
         </>
     )
 };

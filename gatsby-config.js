@@ -8,6 +8,7 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-mdx",
     "gatsby-plugin-jss",
+    'gatsby-plugin-breakpoints',
     {
       resolve: "gatsby-source-filesystem",
       options: {
