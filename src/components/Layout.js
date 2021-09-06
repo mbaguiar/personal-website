@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import { useMediaQuery } from "react-responsive";
 import HeaderMobile from "./HeaderMobile";
 import Helmet from 'react-helmet';
-import favicon from '../../public/static/favicon.ico';
+import favicon from '../assets/icon.png';
 
 const useSyles = createUseStyles({
 
