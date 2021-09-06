@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
     aboutMe: {
 		display: "flex",
 		flexDirection: "row",
-		marginTop: "12em",
+		marginTop: "8em",
 		alignItems: "center",
 	},
 	image: {
