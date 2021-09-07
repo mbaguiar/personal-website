@@ -1,6 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { Link } from "gatsby";
+import cv from "../assets/Mariana_Aguiar_CV.pdf";
 
 const useStyles = createUseStyles({
     navbar: {
@@ -18,8 +19,7 @@ const useStyles = createUseStyles({
     menuOption: {
         color: "black",
         "&:hover": {
-            color: "black",
-            opacity: "50%",
+            color: "#666B6A",
             transition: "0.5s",
         },
         fontSize: "1.5em",
@@ -29,7 +29,6 @@ const useStyles = createUseStyles({
         fontWeight: "600",
     },
     logoText: {
-        color: "black",
         fontSize: "2.5rem",
         textDecoration: "none",
         fontFamily: "'Poppins', sans-serif",
@@ -56,7 +55,7 @@ export const Header = () => {
                 <Link className={classes.menuOption} to="/projects">
                     PROJECTS
                 </Link>
-                <a href="https://drive.google.com/file/d/1jyLEfdlFNR0LKfvd_irDjrnQG_nRTL6k/view?usp=sharing" className={classes.menuOption}>
+                <a href={cv} className={classes.menuOption}>
                     RESUME
                 </a>
             </div>

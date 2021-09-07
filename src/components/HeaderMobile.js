@@ -27,7 +27,6 @@ const useStyles = createUseStyles({
         textDecoration: "none",
         fontFamily: "'Poppins', sans-serif",
         fontWeight: "600",
-        color: "black",
     }
 })
 
