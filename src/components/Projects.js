@@ -53,7 +53,7 @@ export const Projects = () => {
                             people="8"
                             type="LDSO @FEUP"
                             description="Email logs parser for failed email messages."
-                            techs={["Python", "Laravel", "PHP", "RabbitMQ"]}/>
+                            techs={["Python", "Laravel", "PHP", "Kafka"]}/>
             <ProjectCard key="6" title="pilldrop"
                             link="https://github.com/mbaguiar/FEUP-LCOM/tree/master/proj"
                             people="2"
